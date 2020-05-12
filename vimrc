@@ -1,6 +1,7 @@
 set hlsearch
 let mapleader=" "
 exec "nohlsearch"
+noremap ; :
 noremap <LEADER><CR> :nohlsearch<CR>
 set smartindent
 set backspace=2
@@ -57,7 +58,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'Align'
 Plugin 'tpope/vim-surround'
 Plugin 'c.vim'
-Plugin 'edkolev/tmuxline.vim'
+Plugin 'lilydjwg/Colorizer'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -82,7 +83,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <F3> :NERDTreeToggle<CR>
 
 
-map <leader>tc :tabc<CR>
+map <leader>tcc :tabc<CR>
 
 map <leader>to :tabo<CR>
 
@@ -190,15 +191,7 @@ let g:EasyMotion_smartcase  = 1  " Turn on case-insensitive feature
 
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
-endif
 "For Neovim 0.1.3 and 0.1.4
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"" Theme
-syntax enable
-"colorscheme tender
-let g:lightline = { 'colorscheme': 'tender' }
 
 
 
@@ -242,7 +235,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'dracula/vim'
 Plug 'w0rp/ale'
 Plug 'mbbill/undotree/'
 Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
@@ -273,7 +265,6 @@ call plug#end()
 
 
 
-"colorscheme dracula
 noremap <C-p> :FZF<CR>
 noremap <C-f> :Ag<CR>
 command! -bang -nargs=* Ag
@@ -295,7 +286,7 @@ let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
 
 
-let g:coc_global_extensions = ['coc-python', 'coc-vimlsp', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore', 'coc-vimlsp', 'coc-tailwindcss', 'coc-stylelint', 'coc-tslint', 'coc-lists', 'coc-git', 'coc-explorer', 'coc-pyright', 'coc-sourcekit', 'coc-translator', 'coc-flutter']
+let g:coc_global_extensions = ['coc-python', 'coc-vimlsp', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore', 'coc-vimlsp', 'coc-tailwindcss', 'coc-stylelint', 'coc-tslint', 'coc-lists', 'coc-git', 'coc-explorer', 'coc-pyright', 'coc-sourcekit', 'coc-translator', 'coc-flutter','coc-clangd']
 function! s:check_back_space() abort
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1]	=~ '\s'
@@ -352,3 +343,10 @@ let g:go_highlight_variable_assignments = 0
 let g:go_highlight_variable_declarations = 0
 
 nnoremap \f :Autoformat<CR>
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+syntax enable
+let g:lightline = { 'colorscheme': 'tender' }
