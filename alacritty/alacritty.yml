@@ -178,8 +178,10 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x382a36'
-    foreground: '0xf8f8f2'
+    #background: '0x382a36'
+    background: '0x49AEE6'
+    foreground: '0x8c32fB'
+    #foreground: '0xf8f8f2'
 
     # Bright and dim foreground colors
     #
@@ -273,7 +275,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.4
+background_opacity: 0.15
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
