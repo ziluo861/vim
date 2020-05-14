@@ -22,7 +22,9 @@ set encoding=utf-8
 set showmatch 
 set matchtime=2 
 set ignorecase
+set incsearch
 set wrap
+set clipboard=unnamedplus
 set wildmenu
 set showcmd
 set smartcase
@@ -237,8 +239,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
 Plug 'mbbill/undotree/'
-Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
 Plug 'jaxbot/semantic-highlight.vim'
 Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
@@ -260,6 +262,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'jceb/vim-orgmode', {'for': ['vim-plug', 'org']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()
 
@@ -286,7 +289,7 @@ let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
 
 
-let g:coc_global_extensions = ['coc-python', 'coc-vimlsp', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore', 'coc-vimlsp', 'coc-tailwindcss', 'coc-stylelint', 'coc-tslint', 'coc-lists', 'coc-git', 'coc-explorer', 'coc-pyright', 'coc-sourcekit', 'coc-translator', 'coc-flutter','coc-clangd']
+let g:coc_global_extensions = ['coc-python', 'coc-vimlsp', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore', 'coc-vimlsp', 'coc-tailwindcss', 'coc-stylelint', 'coc-tslint', 'coc-lists', 'coc-git', 'coc-explorer', 'coc-pyright', 'coc-sourcekit', 'coc-translator', 'coc-flutter']
 function! s:check_back_space() abort
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1]	=~ '\s'
