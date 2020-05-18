@@ -49,12 +49,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'majutsushi/tagbar'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'Mark--Karkat'
 Plugin 'luochen1990/rainbow'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'jacoborus/tender.vim'
-Plugin 'vim-scripts/mru.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Align'
@@ -237,27 +234,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'w0rp/ale'
 Plug 'mbbill/undotree/'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
 Plug 'jaxbot/semantic-highlight.vim'
-Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
-Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
-Plug 'elzr/vim-json'
-Plug 'hail2u/vim-css3-syntax', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
-Plug 'pangloss/vim-javascript', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-Plug 'jelera/vim-javascript-syntax', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-Plug 'tmhedberg/SimpylFold', { 'for' :['python', 'vim-plug'] }
-Plug 'Vimjas/vim-python-pep8-indent', { 'for' :['python', 'vim-plug'] }
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python', 'vim-plug'] }
 Plug 'tweekmonster/braceless.vim'
 Plug 'dart-lang/dart-vim-plugin'
-Plug 'thosakwe/vim-flutter'
-Plug 'keith/swift.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'jceb/vim-orgmode', {'for': ['vim-plug', 'org']}
 Plug 'ryanoasis/vim-devicons'
@@ -278,13 +260,6 @@ command! -bang -nargs=* Ag
 
 
 
-let g:ale_linters = {
-\   'c++': ['clang', 'gcc'],
-\   'c': ['clang', 'gcc'],
-\   'python': ['pylint'],
-\}
-
-let b:ale_fixers = ['autopep8', 'yapf']
 let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
 
